@@ -37,12 +37,12 @@ This API implements strict Role-Based Access Control (RBAC) with **EXACTLY 3 Rol
   },
   servers: [
     {
-      url: "http://localhost:3000",
-      description: "Local Development Server",
+      url: "https://resqpatient.onrender.com",
+      description: "Live Production Server (Render)",
     },
     {
-      url: "https://api.resqpatient.com",
-      description: "Production Server",
+      url: "http://localhost:3000",
+      description: "Local Development Server",
     },
   ],
   tags: [
@@ -259,6 +259,34 @@ This API implements strict Role-Based Access Control (RBAC) with **EXACTLY 3 Rol
                   properties: {
                     success: { type: "boolean", example: true },
                     message: { type: "string", example: "Welcome to ResQPatient Backend API 🚑" },
+                    documentation: { type: "string", example: "/docs" },
+                    openapi: { type: "string", example: "/docs.json" },
+                    health: { type: "string", example: "/api/v1/health" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/ping": {
+      get: {
+        tags: ["Health"],
+        summary: "Lightweight Keep-Alive Ping Probe",
+        description: "Zero-database overhead keep-alive probe used by uptime monitors to prevent Render from idling.",
+        responses: {
+          200: {
+            description: "Pong response",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    status: { type: "string", example: "OK" },
+                    message: { type: "string", example: "pong" },
+                    timestamp: { type: "string", format: "date-time", example: "2026-09-07T12:00:00.000Z" },
+                    uptime: { type: "number", example: 342.1 },
                   },
                 },
               },

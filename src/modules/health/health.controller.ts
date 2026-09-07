@@ -28,6 +28,16 @@ const getHealthStatus = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const ping = (_req: Request, res: Response) => {
+  res.status(200).json({
+    status: "OK",
+    message: "pong",
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+  });
+};
+
 export const HealthController = {
   getHealthStatus,
+  ping,
 };

@@ -1,8 +1,10 @@
 import app from "./app.js";
 import { config } from "./config/index.js";
+import { initKeepAlive } from "./utils/keepAlive.js";
 
 const server = app.listen(config.port, () => {
   console.log(`ResQPatient backend is running on port ${config.port}`);
+  initKeepAlive();
 });
 
 process.on("unhandledRejection", (err) => {

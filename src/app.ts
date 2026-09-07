@@ -62,6 +62,15 @@ app.get("/", (req: Request, res: Response) => {
   });
 });
 
+app.get("/ping", (req: Request, res: Response) => {
+  res.status(200).json({
+    status: "OK",
+    message: "pong",
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+  });
+});
+
 // Centralized API v1 routes
 app.use("/api/v1", router);
 

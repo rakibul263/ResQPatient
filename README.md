@@ -329,11 +329,13 @@ The system enforces **EXACTLY 3 core roles**:
 ResQPatient features a fully interactive, production-ready **Swagger UI** with real-world examples, validation schemas, and persistent authorization.
 
 ### 🌐 Accessing the Docs:
-* **Interactive UI**: [http://localhost:3000/docs](http://localhost:3000/docs) (or [http://localhost:3000/api/docs](http://localhost:3000/api/docs))
-* **Raw OpenAPI 3.0.3 Specification**: [http://localhost:3000/docs.json](http://localhost:3000/docs.json)
+* **Live Production Server**: [https://resqpatient.onrender.com](https://resqpatient.onrender.com)
+* **Live Interactive Swagger UI**: [https://resqpatient.onrender.com/docs](https://resqpatient.onrender.com/docs)
+* **Live OpenAPI 3.0.3 Specification**: [https://resqpatient.onrender.com/docs.json](https://resqpatient.onrender.com/docs.json)
+* **Local Development UI**: [http://localhost:3000/docs](http://localhost:3000/docs)
 
 ### 🔑 How to Authenticate & Test in Swagger:
-1. Open [http://localhost:3000/docs](http://localhost:3000/docs) in your browser.
+1. Open [https://resqpatient.onrender.com/docs](https://resqpatient.onrender.com/docs) (or [http://localhost:3000/docs](http://localhost:3000/docs)) in your browser.
 2. Navigate to the **Authentication** section and expand `POST /api/v1/auth/login`.
 3. Click **Try it out** and execute with seed credentials (e.g. `admin@resqpatient.com` / `Admin@12345` or `patient1@resqpatient.com` / `Patient@12345`).
 4. Copy the `accessToken` from the response.
@@ -345,11 +347,13 @@ ResQPatient features a fully interactive, production-ready **Swagger UI** with r
 
 ## 📡 API Reference
 
-### Health
+### Health & Keep-Alive
 | Method | Endpoint | Access | Description |
 | :--- | :--- | :--- | :--- |
-| `GET` | `/` | Public | API welcome check |
+| `GET` | `/` | Public | API welcome check & documentation index |
+| `GET` | `/ping` | Public | Lightweight heartbeat endpoint to prevent Render sleep |
 | `GET` | `/api/v1/health` | Public | System status and database connectivity check |
+| `GET` | `/api/v1/health/ping` | Public | Fast health-probe pong response |
 
 ### Authentication
 | Method | Endpoint | Access | Description |

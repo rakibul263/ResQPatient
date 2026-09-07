@@ -30,4 +30,20 @@ describe("Swagger Documentation Endpoints", () => {
     expect(res.body.documentation).toBe("/docs");
     expect(res.body.openapi).toBe("/docs.json");
   });
+
+  it("GET /ping - should respond with pong and uptime for keep-alive monitoring", async () => {
+    const res = await request(app).get("/ping");
+    expect(res.status).toBe(200);
+    expect(res.body).toHaveProperty("status", "OK");
+    expect(res.body).toHaveProperty("message", "pong");
+    expect(res.body).toHaveProperty("uptime");
+    expect(res.body).toHaveProperty("timestamp");
+  });
+
+  it("GET /api/v1/health/ping - should respond with pong on the health route", async () => {
+    const res = await request(app).get("/api/v1/health/ping");
+    expect(res.status).toBe(200);
+    expect(res.body).toHaveProperty("status", "OK");
+    expect(res.body).toHaveProperty("message", "pong");
+  });
 });
