@@ -57,7 +57,11 @@ const getMyPayments = catchAsync(async (req: Request, res: Response) => {
 
 const handleWebhook = catchAsync(async (req: Request, res: Response) => {
   const signature = req.headers["stripe-signature"];
-  const rawBody = (req as any).rawBody || req.body;
+  const rawBody =
+    (req as any).rawBody ||
+    (Buffer.isBuffer(req.body) || typeof req.body === "string"
+      ? req.body
+      : JSON.stringify(req.body));
 
   const result = await PaymentService.handleStripeWebhook(signature, rawBody);
 

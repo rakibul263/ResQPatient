@@ -10,6 +10,7 @@ import { globalErrorHandler } from "./middlewares/globalErrorHandler.js";
 import { notFound } from "./middlewares/notFound.js";
 import router from "./routes/index.js";
 import { SwaggerRoutes } from "./docs/swagger.route.js";
+import { PaymentController } from "./modules/payment/payment.controller.js";
 
 const app: Application = express();
 
@@ -73,6 +74,10 @@ app.get("/ping", (req: Request, res: Response) => {
 
 // Centralized API v1 routes
 app.use("/api/v1", router);
+
+// Stripe Webhook aliases (supports CLI forward --forward-to localhost:3000/api/stripe/webhook & live URL)
+app.post("/api/stripe/webhook", PaymentController.handleWebhook);
+app.post("/api/v1/stripe/webhook", PaymentController.handleWebhook);
 
 // Error handlers
 app.use(notFound);

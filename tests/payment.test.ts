@@ -132,4 +132,27 @@ describe("Payment & Webhook Tests", () => {
     expect(res2.status).toBe(200);
     expect(res2.body.data.message).toContain("idempotent");
   });
+
+  it("POST /api/stripe/webhook - should successfully handle webhook on the alias route", async () => {
+    const mockEvent = {
+      id: `evt_mock_alias_${Date.now()}`,
+      type: "payment_intent.succeeded",
+      data: {
+        object: {
+          id: `pi_nonexistent_${Date.now()}`,
+          status: "succeeded",
+          amount_received: 5000,
+        },
+      },
+    };
+
+    const res = await request(app)
+      .post("/api/stripe/webhook")
+      .set("stripe-signature", "mock_signature_for_test")
+      .set("Content-Type", "application/json")
+      .send(JSON.stringify(mockEvent));
+
+    expect(res.status).toBe(200);
+    expect(res.body.success).toBe(true);
+  });
 });
