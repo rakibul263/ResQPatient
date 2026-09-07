@@ -10,7 +10,7 @@
     "db:init": "prisma db init",
     "postinstall": "prisma skills sync || exit 0",
     "dev": "tsx watch src/server.ts",
-    "build": "tsc",
+    "build": "prisma contract emit && tsc",
     "start": "node dist/server.js",
     "contract:emit": "prisma contract emit"
   },
