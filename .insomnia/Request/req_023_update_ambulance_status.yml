@@ -1,0 +1,35 @@
+_id: req_023_update_ambulance_status
+parentId: fld_005_04__ambulances
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/ambulances/{{ambulanceId}}/status'
+name: Update Ambulance Status
+description: ''
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "status": "AVAILABLE"
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{adminToken}}
+    disabled: false
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{adminToken}}'
+  disabled: false
+metaSortKey: -1788779720293
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

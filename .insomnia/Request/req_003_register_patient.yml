@@ -1,0 +1,33 @@
+_id: req_003_register_patient
+parentId: fld_002_01__authentication
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/auth/register'
+name: Register Patient
+description: ''
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "Alice Johnson",
+      "email": "alice.patient@example.com",
+      "password": "Patient@12345",
+      "phone": "+1-555-9011",
+      "role": "PATIENT"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication: {}
+metaSortKey: -1788779720493
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

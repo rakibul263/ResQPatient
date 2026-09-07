@@ -1,0 +1,32 @@
+_id: env_base_resqpatient
+parentId: wrk_resqpatient_backend
+modified: 1788779720523
+created: 1788779720523
+name: Base Environment
+data:
+  baseUrl: https://resqpatient.onrender.com
+  adminToken: ''
+  driverToken: ''
+  patientToken: ''
+  refreshToken: ''
+  emergencyId: ''
+  dispatchId: ''
+  ambulanceId: ''
+  hospitalId: ''
+  paymentId: ''
+dataPropertyOrder:
+  '&':
+    - baseUrl
+    - adminToken
+    - driverToken
+    - patientToken
+    - refreshToken
+    - emergencyId
+    - dispatchId
+    - ambulanceId
+    - hospitalId
+    - paymentId
+color: null
+isPrivate: false
+metaSortKey: 1788779720523
+type: Environment

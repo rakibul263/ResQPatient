@@ -1,0 +1,35 @@
+_id: req_038_cancel_emergency__rejected_after_en_route_
+parentId: fld_007_06__emergencies___dispatch_workflow
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/emergencies/{{emergencyId}}/cancel'
+name: Cancel Emergency (Rejected after EN_ROUTE)
+description: ''
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "reason": "Family member drove instead."
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{patientToken}}
+    disabled: false
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{patientToken}}'
+  disabled: false
+metaSortKey: -1788779720143
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

@@ -1,0 +1,27 @@
+_id: req_040_get_payment_details
+parentId: fld_008_07__payments
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/payments/{{paymentId}}'
+name: Get Payment Details
+description: ''
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{patientToken}}
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{patientToken}}'
+  disabled: false
+metaSortKey: -1788779720123
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

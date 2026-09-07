@@ -1,0 +1,27 @@
+_id: req_020_get_ambulance_by_id
+parentId: fld_005_04__ambulances
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/ambulances/{{ambulanceId}}'
+name: Get Ambulance by ID
+description: ''
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{patientToken}}
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{patientToken}}'
+  disabled: false
+metaSortKey: -1788779720323
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

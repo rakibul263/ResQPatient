@@ -1,0 +1,41 @@
+_id: req_025_create_hospital__admin_
+parentId: fld_006_05__hospitals
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/hospitals'
+name: Create Hospital (Admin)
+description: ''
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "Brooklyn Emergency Care",
+      "address": "789 Atlantic Ave, Brooklyn, NY",
+      "contactNumber": "+1-718-555-0199",
+      "lat": 40.6892,
+      "lng": -73.9744,
+      "capacity": 120,
+      "availableBeds": 30
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{adminToken}}
+    disabled: false
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{adminToken}}'
+  disabled: false
+metaSortKey: -1788779720273
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

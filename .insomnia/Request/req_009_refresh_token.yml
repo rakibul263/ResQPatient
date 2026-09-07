@@ -1,0 +1,29 @@
+_id: req_009_refresh_token
+parentId: fld_002_01__authentication
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/auth/refresh-token'
+name: Refresh Token
+description: ''
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "refreshToken": "{{refreshToken}}"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication: {}
+metaSortKey: -1788779720433
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

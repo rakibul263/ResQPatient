@@ -1,0 +1,27 @@
+_id: req_021_find_nearby_ambulances__haversine_geo_
+parentId: fld_005_04__ambulances
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/ambulances/nearby?lat=40.7128&lng=-74.0060&radius=25&type=ICU'
+name: Find Nearby Ambulances (Haversine Geo)
+description: ''
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{patientToken}}
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{patientToken}}'
+  disabled: false
+metaSortKey: -1788779720313
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

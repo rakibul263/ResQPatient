@@ -1,0 +1,36 @@
+_id: req_022_update_gps_coordinates
+parentId: fld_005_04__ambulances
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/ambulances/{{ambulanceId}}/location'
+name: Update GPS Coordinates
+description: ''
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "currentLat": 40.7150,
+      "currentLng": -74.0080
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{driverToken}}
+    disabled: false
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{driverToken}}'
+  disabled: false
+metaSortKey: -1788779720303
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

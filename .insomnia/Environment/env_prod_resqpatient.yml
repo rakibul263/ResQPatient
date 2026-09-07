@@ -1,0 +1,14 @@
+_id: env_prod_resqpatient
+parentId: env_base_resqpatient
+modified: 1788779720523
+created: 1788779720523
+name: Production (Render)
+data:
+  baseUrl: https://resqpatient.onrender.com
+dataPropertyOrder:
+  '&':
+    - baseUrl
+color: '#7d69cb'
+isPrivate: false
+metaSortKey: 1788779720524
+type: Environment

@@ -1,0 +1,10 @@
+_id: fld_007_06__emergencies___dispatch_workflow
+parentId: wrk_resqpatient_backend
+modified: 1788779720523
+created: 1788779720523
+name: 06. Emergencies & Dispatch Workflow
+description: ''
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1788779719823
+type: RequestGroup

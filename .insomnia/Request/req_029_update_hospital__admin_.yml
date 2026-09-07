@@ -1,0 +1,35 @@
+_id: req_029_update_hospital__admin_
+parentId: fld_006_05__hospitals
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/hospitals/{{hospitalId}}'
+name: Update Hospital (Admin)
+description: ''
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "availableBeds": 35
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{adminToken}}
+    disabled: false
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{adminToken}}'
+  disabled: false
+metaSortKey: -1788779720233
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

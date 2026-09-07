@@ -1,0 +1,35 @@
+_id: req_035_6__driver_state____picked_up
+parentId: fld_007_06__emergencies___dispatch_workflow
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/dispatches/{{dispatchId}}/status'
+name: 6. Driver State -> PICKED_UP
+description: ''
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "status": "PICKED_UP"
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{driverToken}}
+    disabled: false
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{driverToken}}'
+  disabled: false
+metaSortKey: -1788779720173
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

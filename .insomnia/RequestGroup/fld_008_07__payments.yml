@@ -1,0 +1,10 @@
+_id: fld_008_07__payments
+parentId: wrk_resqpatient_backend
+modified: 1788779720523
+created: 1788779720523
+name: 07. Payments
+description: ''
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1788779719723
+type: RequestGroup

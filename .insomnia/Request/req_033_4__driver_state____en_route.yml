@@ -1,0 +1,35 @@
+_id: req_033_4__driver_state____en_route
+parentId: fld_007_06__emergencies___dispatch_workflow
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/dispatches/{{dispatchId}}/status'
+name: 4. Driver State -> EN_ROUTE
+description: ''
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "status": "EN_ROUTE"
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{driverToken}}
+    disabled: false
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{driverToken}}'
+  disabled: false
+metaSortKey: -1788779720193
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

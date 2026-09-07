@@ -1,0 +1,21 @@
+_id: req_002_system___db_health_check
+parentId: fld_001_00__health___system
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/health'
+name: System & DB Health Check
+description: ''
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1788779720503
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

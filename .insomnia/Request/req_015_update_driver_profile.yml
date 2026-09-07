@@ -1,0 +1,36 @@
+_id: req_015_update_driver_profile
+parentId: fld_004_03__drivers
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/drivers/me'
+name: Update Driver Profile
+description: ''
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "experienceYears": 6,
+      "licenseNumber": "DL-NYC-UPDATED"
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{driverToken}}
+    disabled: false
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{driverToken}}'
+  disabled: false
+metaSortKey: -1788779720373
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

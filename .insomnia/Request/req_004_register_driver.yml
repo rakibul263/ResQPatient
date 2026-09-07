@@ -1,0 +1,33 @@
+_id: req_004_register_driver
+parentId: fld_002_01__authentication
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/auth/register'
+name: Register Driver
+description: ''
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "name": "Tom Driver",
+      "email": "tom.driver@example.com",
+      "password": "Driver@12345",
+      "phone": "+1-555-9022",
+      "role": "DRIVER"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication: {}
+metaSortKey: -1788779720483
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

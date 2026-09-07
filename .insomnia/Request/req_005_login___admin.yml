@@ -1,0 +1,30 @@
+_id: req_005_login___admin
+parentId: fld_002_01__authentication
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/auth/login'
+name: Login - Admin
+description: ''
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "email": "admin@resqpatient.com",
+      "password": "Admin@12345"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication: {}
+metaSortKey: -1788779720473
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

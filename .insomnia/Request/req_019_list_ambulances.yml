@@ -1,0 +1,27 @@
+_id: req_019_list_ambulances
+parentId: fld_005_04__ambulances
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/ambulances?page=1&limit=10&status=AVAILABLE'
+name: List Ambulances
+description: ''
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{patientToken}}
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{patientToken}}'
+  disabled: false
+metaSortKey: -1788779720333
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

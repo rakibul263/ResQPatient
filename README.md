@@ -547,21 +547,24 @@ pnpm build
 
 ---
 
-## 📮 Postman Collection
+## 📮 Postman & Insomnia Collections
 
-A complete Postman collection is included in the project root:
+Complete, production-ready API collections with automatic environment variables (`baseUrl`, `adminToken`, `patientToken`, `driverToken`) and test scripts are included:
 
-```text
-ResQPatient.postman_collection.json
-```
+### 1. Postman:
+* File: `ResQPatient.postman_collection.json`
+* **Import**: Open Postman $\rightarrow$ Click **Import** $\rightarrow$ Select `ResQPatient.postman_collection.json`.
 
-### How to use:
-1. Open Postman $\rightarrow$ Click **Import** $\rightarrow$ Select `ResQPatient.postman_collection.json`.
-2. The collection includes pre-configured collection variables (`baseUrl`, `patientToken`, `driverToken`, `adminToken`).
-3. Running the **01. Authentication / Login - Admin** request automatically extracts the JWT and stores it in `adminToken`.
-4. Running **01. Authentication / Login - Patient** automatically stores `patientToken`.
-5. Running **01. Authentication / Login - Driver** automatically stores `driverToken`.
-6. Requests across all 8 folders are chained dynamically with response tests.
+### 2. Insomnia (Git Sync & Direct Import):
+* **Git Sync**: Native `.insomnia/` directory structure is tracked in the repository. Insomnia Git Sync will automatically detect all requests, environments, and folders when connected to this repo.
+* **1-Click Import Files**:
+  * `insomnia.json`
+  * `Insomnia_ResQPatient.json`
+* **How to Import in Insomnia**:
+  1. Open Insomnia $\rightarrow$ Click **Settings (⚙️)** or **Dashboard**.
+  2. Click **Import / Export** $\rightarrow$ **Import Data** $\rightarrow$ **From File**.
+  3. Select `insomnia.json` or `Insomnia_ResQPatient.json`.
+  4. Switch between **Production (Render)** (`https://resqpatient.onrender.com`) and **Local Development** (`http://localhost:3000`) environments instantly!
 
 ---
 

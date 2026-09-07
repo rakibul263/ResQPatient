@@ -1,0 +1,35 @@
+_id: req_016_toggle_availability
+parentId: fld_004_03__drivers
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/drivers/me/availability'
+name: Toggle Availability
+description: ''
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "isAvailable": true
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{driverToken}}
+    disabled: false
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{driverToken}}'
+  disabled: false
+metaSortKey: -1788779720363
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

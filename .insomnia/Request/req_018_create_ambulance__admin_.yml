@@ -1,0 +1,38 @@
+_id: req_018_create_ambulance__admin_
+parentId: fld_005_04__ambulances
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/ambulances'
+name: Create Ambulance (Admin)
+description: ''
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "vehicleNumber": "AMB-NEW-999",
+      "vehicleType": "ICU",
+      "currentLat": 40.7128,
+      "currentLng": -74.0060
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{adminToken}}
+    disabled: false
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{adminToken}}'
+  disabled: false
+metaSortKey: -1788779720343
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

@@ -1,0 +1,35 @@
+_id: req_039_initiate_payment_for_emergency
+parentId: fld_008_07__payments
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/payments/initiate'
+name: Initiate Payment for Emergency
+description: ''
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "emergencyId": "{{emergencyId}}"
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{patientToken}}
+    disabled: false
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{patientToken}}'
+  disabled: false
+metaSortKey: -1788779720133
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

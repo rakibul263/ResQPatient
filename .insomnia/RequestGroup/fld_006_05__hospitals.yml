@@ -1,0 +1,10 @@
+_id: fld_006_05__hospitals
+parentId: wrk_resqpatient_backend
+modified: 1788779720523
+created: 1788779720523
+name: 05. Hospitals
+description: ''
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1788779719923
+type: RequestGroup

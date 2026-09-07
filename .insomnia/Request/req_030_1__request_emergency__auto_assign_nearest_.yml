@@ -1,0 +1,41 @@
+_id: req_030_1__request_emergency__auto_assign_nearest_
+parentId: fld_007_06__emergencies___dispatch_workflow
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/emergencies'
+name: 1. Request Emergency (Auto-Assign Nearest)
+description: ''
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "hospitalId": "{{hospitalId}}",
+      "pickupLocation": "Broadway & Wall St, New York, NY",
+      "pickupLat": 40.7071,
+      "pickupLng": -74.0110,
+      "ambulanceType": "ICU",
+      "urgencyLevel": "CRITICAL",
+      "notes": "Patient experiencing severe respiratory distress."
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{patientToken}}
+    disabled: false
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{patientToken}}'
+  disabled: false
+metaSortKey: -1788779720223
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

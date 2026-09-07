@@ -1,0 +1,27 @@
+_id: req_024_soft_delete_ambulance__admin_
+parentId: fld_005_04__ambulances
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/ambulances/{{ambulanceId}}'
+name: Soft Delete Ambulance (Admin)
+description: ''
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{adminToken}}
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{adminToken}}'
+  disabled: false
+metaSortKey: -1788779720283
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

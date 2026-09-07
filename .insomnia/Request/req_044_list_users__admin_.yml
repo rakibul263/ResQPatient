@@ -1,0 +1,27 @@
+_id: req_044_list_users__admin_
+parentId: fld_009_08__admin___audit
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/admin/users?page=1&limit=10&role=DRIVER'
+name: List Users (Admin)
+description: ''
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{adminToken}}
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{adminToken}}'
+  disabled: false
+metaSortKey: -1788779720083
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

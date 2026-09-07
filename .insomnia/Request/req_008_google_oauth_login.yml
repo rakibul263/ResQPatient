@@ -1,0 +1,30 @@
+_id: req_008_google_oauth_login
+parentId: fld_002_01__authentication
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/auth/google'
+name: Google OAuth Login
+description: ''
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "idToken": "mock-or-real-google-id-token",
+      "role": "PATIENT"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication: {}
+metaSortKey: -1788779720443
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

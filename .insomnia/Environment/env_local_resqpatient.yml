@@ -1,0 +1,14 @@
+_id: env_local_resqpatient
+parentId: env_base_resqpatient
+modified: 1788779720523
+created: 1788779720523
+name: Local Development
+data:
+  baseUrl: http://localhost:3000
+dataPropertyOrder:
+  '&':
+    - baseUrl
+color: '#44bb66'
+isPrivate: false
+metaSortKey: 1788779720525
+type: Environment

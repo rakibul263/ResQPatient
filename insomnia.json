@@ -1,0 +1,1880 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-09-07T11:15:20.524Z",
+  "__export_source": "insomnia.desktop.app:v10.0.0",
+  "resources": [
+    {
+      "_id": "wrk_resqpatient_backend",
+      "parentId": null,
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "name": "ResQPatient API",
+      "description": "Comprehensive Emergency Ambulance Dispatch & Response Platform API Collection",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_base_resqpatient",
+      "parentId": "wrk_resqpatient_backend",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "name": "Base Environment",
+      "data": {
+        "baseUrl": "https://resqpatient.onrender.com",
+        "adminToken": "",
+        "driverToken": "",
+        "patientToken": "",
+        "refreshToken": "",
+        "emergencyId": "",
+        "dispatchId": "",
+        "ambulanceId": "",
+        "hospitalId": "",
+        "paymentId": ""
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl",
+          "adminToken",
+          "driverToken",
+          "patientToken",
+          "refreshToken",
+          "emergencyId",
+          "dispatchId",
+          "ambulanceId",
+          "hospitalId",
+          "paymentId"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1788779720523,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_prod_resqpatient",
+      "parentId": "env_base_resqpatient",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "name": "Production (Render)",
+      "data": {
+        "baseUrl": "https://resqpatient.onrender.com"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl"
+        ]
+      },
+      "color": "#7d69cb",
+      "isPrivate": false,
+      "metaSortKey": 1788779720524,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_local_resqpatient",
+      "parentId": "env_base_resqpatient",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "name": "Local Development",
+      "data": {
+        "baseUrl": "http://localhost:3000"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl"
+        ]
+      },
+      "color": "#44bb66",
+      "isPrivate": false,
+      "metaSortKey": 1788779720525,
+      "_type": "environment"
+    },
+    {
+      "_id": "fld_001_00__health___system",
+      "parentId": "wrk_resqpatient_backend",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "name": "00. Health & System",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1788779720423,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_001_root_welcome",
+      "parentId": "fld_001_00__health___system",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/",
+      "name": "Root Welcome",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1788779720513,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_002_system___db_health_check",
+      "parentId": "fld_001_00__health___system",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/health",
+      "name": "System & DB Health Check",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1788779720503,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_002_01__authentication",
+      "parentId": "wrk_resqpatient_backend",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "name": "01. Authentication",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1788779720323,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_003_register_patient",
+      "parentId": "fld_002_01__authentication",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/auth/register",
+      "name": "Register Patient",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Alice Johnson\",\n  \"email\": \"alice.patient@example.com\",\n  \"password\": \"Patient@12345\",\n  \"phone\": \"+1-555-9011\",\n  \"role\": \"PATIENT\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1788779720493,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_004_register_driver",
+      "parentId": "fld_002_01__authentication",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/auth/register",
+      "name": "Register Driver",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Tom Driver\",\n  \"email\": \"tom.driver@example.com\",\n  \"password\": \"Driver@12345\",\n  \"phone\": \"+1-555-9022\",\n  \"role\": \"DRIVER\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1788779720483,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_005_login___admin",
+      "parentId": "fld_002_01__authentication",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/auth/login",
+      "name": "Login - Admin",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"email\": \"admin@resqpatient.com\",\n  \"password\": \"Admin@12345\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1788779720473,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_006_login___patient",
+      "parentId": "fld_002_01__authentication",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/auth/login",
+      "name": "Login - Patient",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"email\": \"patient1@resqpatient.com\",\n  \"password\": \"Patient@12345\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1788779720463,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_007_login___driver",
+      "parentId": "fld_002_01__authentication",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/auth/login",
+      "name": "Login - Driver",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"email\": \"driver1@resqpatient.com\",\n  \"password\": \"Driver@12345\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1788779720453,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_008_google_oauth_login",
+      "parentId": "fld_002_01__authentication",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/auth/google",
+      "name": "Google OAuth Login",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"idToken\": \"mock-or-real-google-id-token\",\n  \"role\": \"PATIENT\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1788779720443,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_009_refresh_token",
+      "parentId": "fld_002_01__authentication",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/auth/refresh-token",
+      "name": "Refresh Token",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"refreshToken\": \"{{refreshToken}}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1788779720433,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_010_logout",
+      "parentId": "fld_002_01__authentication",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/auth/logout",
+      "name": "Logout",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"refreshToken\": \"{{refreshToken}}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1788779720423,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_003_02__users",
+      "parentId": "wrk_resqpatient_backend",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "name": "02. Users",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1788779720223,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_011_get_profile__me_",
+      "parentId": "fld_003_02__users",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/users/me",
+      "name": "Get Profile (Me)",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{patientToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{patientToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720413,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_012_update_profile",
+      "parentId": "fld_003_02__users",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/users/me",
+      "name": "Update Profile",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"John Updated Doe\",\n  \"phone\": \"+1-555-9999\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{patientToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{patientToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720403,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_013_change_password",
+      "parentId": "fld_003_02__users",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/users/me/password",
+      "name": "Change Password",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"oldPassword\": \"Patient@12345\",\n  \"newPassword\": \"Patient@NewPass123\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{patientToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{patientToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720393,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_004_03__drivers",
+      "parentId": "wrk_resqpatient_backend",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "name": "03. Drivers",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1788779720123,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_014_get_driver_profile__me_",
+      "parentId": "fld_004_03__drivers",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/drivers/me",
+      "name": "Get Driver Profile (Me)",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{driverToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{driverToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720383,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_015_update_driver_profile",
+      "parentId": "fld_004_03__drivers",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/drivers/me",
+      "name": "Update Driver Profile",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"experienceYears\": 6,\n  \"licenseNumber\": \"DL-NYC-UPDATED\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{driverToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{driverToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720373,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_016_toggle_availability",
+      "parentId": "fld_004_03__drivers",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/drivers/me/availability",
+      "name": "Toggle Availability",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"isAvailable\": true\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{driverToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{driverToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720363,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_017_get_driver_trip_history",
+      "parentId": "fld_004_03__drivers",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/drivers/me/trips?page=1&limit=10",
+      "name": "Get Driver Trip History",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{driverToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{driverToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720353,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_005_04__ambulances",
+      "parentId": "wrk_resqpatient_backend",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "name": "04. Ambulances",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1788779720023,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_018_create_ambulance__admin_",
+      "parentId": "fld_005_04__ambulances",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/ambulances",
+      "name": "Create Ambulance (Admin)",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"vehicleNumber\": \"AMB-NEW-999\",\n  \"vehicleType\": \"ICU\",\n  \"currentLat\": 40.7128,\n  \"currentLng\": -74.0060\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{adminToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{adminToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720343,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_019_list_ambulances",
+      "parentId": "fld_005_04__ambulances",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/ambulances?page=1&limit=10&status=AVAILABLE",
+      "name": "List Ambulances",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{patientToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{patientToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720333,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_020_get_ambulance_by_id",
+      "parentId": "fld_005_04__ambulances",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/ambulances/{{ambulanceId}}",
+      "name": "Get Ambulance by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{patientToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{patientToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720323,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_021_find_nearby_ambulances__haversine_geo_",
+      "parentId": "fld_005_04__ambulances",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/ambulances/nearby?lat=40.7128&lng=-74.0060&radius=25&type=ICU",
+      "name": "Find Nearby Ambulances (Haversine Geo)",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{patientToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{patientToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720313,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_022_update_gps_coordinates",
+      "parentId": "fld_005_04__ambulances",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/ambulances/{{ambulanceId}}/location",
+      "name": "Update GPS Coordinates",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"currentLat\": 40.7150,\n  \"currentLng\": -74.0080\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{driverToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{driverToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720303,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_023_update_ambulance_status",
+      "parentId": "fld_005_04__ambulances",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/ambulances/{{ambulanceId}}/status",
+      "name": "Update Ambulance Status",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"status\": \"AVAILABLE\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{adminToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{adminToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720293,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_024_soft_delete_ambulance__admin_",
+      "parentId": "fld_005_04__ambulances",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/ambulances/{{ambulanceId}}",
+      "name": "Soft Delete Ambulance (Admin)",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{adminToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{adminToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720283,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_006_05__hospitals",
+      "parentId": "wrk_resqpatient_backend",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "name": "05. Hospitals",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1788779719923,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_025_create_hospital__admin_",
+      "parentId": "fld_006_05__hospitals",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/hospitals",
+      "name": "Create Hospital (Admin)",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Brooklyn Emergency Care\",\n  \"address\": \"789 Atlantic Ave, Brooklyn, NY\",\n  \"contactNumber\": \"+1-718-555-0199\",\n  \"lat\": 40.6892,\n  \"lng\": -73.9744,\n  \"capacity\": 120,\n  \"availableBeds\": 30\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{adminToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{adminToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720273,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_026_list_hospitals",
+      "parentId": "fld_006_05__hospitals",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/hospitals?page=1&limit=10",
+      "name": "List Hospitals",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{patientToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{patientToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720263,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_027_get_hospital_by_id",
+      "parentId": "fld_006_05__hospitals",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/hospitals/{{hospitalId}}",
+      "name": "Get Hospital by ID",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{patientToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{patientToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720253,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_028_find_nearby_hospitals__proximity_",
+      "parentId": "fld_006_05__hospitals",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/hospitals/nearby?lat=40.7128&lng=-74.0060&radius=20",
+      "name": "Find Nearby Hospitals (Proximity)",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{patientToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{patientToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720243,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_029_update_hospital__admin_",
+      "parentId": "fld_006_05__hospitals",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/hospitals/{{hospitalId}}",
+      "name": "Update Hospital (Admin)",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"availableBeds\": 35\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{adminToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{adminToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720233,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_007_06__emergencies___dispatch_workflow",
+      "parentId": "wrk_resqpatient_backend",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "name": "06. Emergencies & Dispatch Workflow",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1788779719823,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_030_1__request_emergency__auto_assign_nearest_",
+      "parentId": "fld_007_06__emergencies___dispatch_workflow",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/emergencies",
+      "name": "1. Request Emergency (Auto-Assign Nearest)",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"hospitalId\": \"{{hospitalId}}\",\n  \"pickupLocation\": \"Broadway & Wall St, New York, NY\",\n  \"pickupLat\": 40.7071,\n  \"pickupLng\": -74.0110,\n  \"ambulanceType\": \"ICU\",\n  \"urgencyLevel\": \"CRITICAL\",\n  \"notes\": \"Patient experiencing severe respiratory distress.\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{patientToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{patientToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720223,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_031_2__get_emergency_details",
+      "parentId": "fld_007_06__emergencies___dispatch_workflow",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/emergencies/{{emergencyId}}",
+      "name": "2. Get Emergency Details",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{patientToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{patientToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720213,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_032_3__driver_accepts_dispatch",
+      "parentId": "fld_007_06__emergencies___dispatch_workflow",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/dispatches/{{dispatchId}}/accept",
+      "name": "3. Driver Accepts Dispatch",
+      "description": "",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{driverToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{driverToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720203,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_033_4__driver_state____en_route",
+      "parentId": "fld_007_06__emergencies___dispatch_workflow",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/dispatches/{{dispatchId}}/status",
+      "name": "4. Driver State -> EN_ROUTE",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"status\": \"EN_ROUTE\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{driverToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{driverToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720193,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_034_5__driver_state____arrived",
+      "parentId": "fld_007_06__emergencies___dispatch_workflow",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/dispatches/{{dispatchId}}/status",
+      "name": "5. Driver State -> ARRIVED",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"status\": \"ARRIVED\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{driverToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{driverToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720183,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_035_6__driver_state____picked_up",
+      "parentId": "fld_007_06__emergencies___dispatch_workflow",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/dispatches/{{dispatchId}}/status",
+      "name": "6. Driver State -> PICKED_UP",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"status\": \"PICKED_UP\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{driverToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{driverToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720173,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_036_7__driver_state____at_hospital",
+      "parentId": "fld_007_06__emergencies___dispatch_workflow",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/dispatches/{{dispatchId}}/status",
+      "name": "7. Driver State -> AT_HOSPITAL",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"status\": \"AT_HOSPITAL\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{driverToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{driverToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720163,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_037_8__driver_state____completed",
+      "parentId": "fld_007_06__emergencies___dispatch_workflow",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/dispatches/{{dispatchId}}/status",
+      "name": "8. Driver State -> COMPLETED",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"status\": \"COMPLETED\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{driverToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{driverToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720153,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_038_cancel_emergency__rejected_after_en_route_",
+      "parentId": "fld_007_06__emergencies___dispatch_workflow",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/emergencies/{{emergencyId}}/cancel",
+      "name": "Cancel Emergency (Rejected after EN_ROUTE)",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"reason\": \"Family member drove instead.\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{patientToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{patientToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720143,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_008_07__payments",
+      "parentId": "wrk_resqpatient_backend",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "name": "07. Payments",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1788779719723,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_039_initiate_payment_for_emergency",
+      "parentId": "fld_008_07__payments",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/payments/initiate",
+      "name": "Initiate Payment for Emergency",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"emergencyId\": \"{{emergencyId}}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{patientToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{patientToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720133,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_040_get_payment_details",
+      "parentId": "fld_008_07__payments",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/payments/{{paymentId}}",
+      "name": "Get Payment Details",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{patientToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{patientToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720123,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_041_get_my_payments",
+      "parentId": "fld_008_07__payments",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/payments/my?page=1&limit=10",
+      "name": "Get My Payments",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{patientToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{patientToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720113,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_042_stripe_webhook__mock_live_",
+      "parentId": "fld_008_07__payments",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/payments/webhook",
+      "name": "Stripe Webhook (Mock/Live)",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"id\": \"evt_test_webhook_001\",\n  \"type\": \"payment_intent.succeeded\",\n  \"data\": {\n    \"object\": {\n      \"id\": \"pi_test_mock_123\",\n      \"status\": \"succeeded\",\n      \"amount_received\": 10500\n    }\n  }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "stripe-signature",
+          "value": "mock_test_signature",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1788779720103,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_009_08__admin___audit",
+      "parentId": "wrk_resqpatient_backend",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "name": "08. Admin & Audit",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1788779719623,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_043_platform_statistics__redis_cached_",
+      "parentId": "fld_009_08__admin___audit",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/admin/statistics",
+      "name": "Platform Statistics (Redis Cached)",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{adminToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{adminToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720093,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_044_list_users__admin_",
+      "parentId": "fld_009_08__admin___audit",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/admin/users?page=1&limit=10&role=DRIVER",
+      "name": "List Users (Admin)",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{adminToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{adminToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720083,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_045_suspend_unsuspend_user",
+      "parentId": "fld_009_08__admin___audit",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/admin/users/{{lastRegisteredUserId}}/status",
+      "name": "Suspend/Unsuspend User",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"isSuspended\": false\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{adminToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{adminToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720073,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_046_update_user_role",
+      "parentId": "fld_009_08__admin___audit",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/admin/users/{{lastRegisteredUserId}}/role",
+      "name": "Update User Role",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"role\": \"DRIVER\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{adminToken}}",
+          "disabled": false
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{adminToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720063,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_047_view_immutable_audit_logs",
+      "parentId": "fld_009_08__admin___audit",
+      "modified": 1788779720523,
+      "created": 1788779720523,
+      "url": "{{baseUrl}}/api/v1/admin/audit-logs?page=1&limit=20&entity=Emergency",
+      "name": "View Immutable Audit Logs",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{adminToken}}",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{adminToken}}",
+        "disabled": false
+      },
+      "metaSortKey": -1788779720053,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    }
+  ]
+}

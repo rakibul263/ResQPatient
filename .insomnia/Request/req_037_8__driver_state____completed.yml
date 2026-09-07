@@ -1,0 +1,35 @@
+_id: req_037_8__driver_state____completed
+parentId: fld_007_06__emergencies___dispatch_workflow
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/dispatches/{{dispatchId}}/status'
+name: 8. Driver State -> COMPLETED
+description: ''
+method: PATCH
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "status": "COMPLETED"
+    }
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{driverToken}}
+    disabled: false
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{driverToken}}'
+  disabled: false
+metaSortKey: -1788779720153
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

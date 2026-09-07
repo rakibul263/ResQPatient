@@ -1,0 +1,40 @@
+_id: req_042_stripe_webhook__mock_live_
+parentId: fld_008_07__payments
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/payments/webhook'
+name: Stripe Webhook (Mock/Live)
+description: ''
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "id": "evt_test_webhook_001",
+      "type": "payment_intent.succeeded",
+      "data": {
+        "object": {
+          "id": "pi_test_mock_123",
+          "status": "succeeded",
+          "amount_received": 10500
+        }
+      }
+    }
+parameters: []
+headers:
+  - name: stripe-signature
+    value: mock_test_signature
+    disabled: false
+  - name: Content-Type
+    value: application/json
+    disabled: false
+authentication: {}
+metaSortKey: -1788779720103
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

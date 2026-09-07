@@ -1,0 +1,27 @@
+_id: req_047_view_immutable_audit_logs
+parentId: fld_009_08__admin___audit
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/admin/audit-logs?page=1&limit=20&entity=Emergency'
+name: View Immutable Audit Logs
+description: ''
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{adminToken}}
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{adminToken}}'
+  disabled: false
+metaSortKey: -1788779720053
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

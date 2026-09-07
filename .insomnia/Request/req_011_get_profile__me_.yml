@@ -1,0 +1,27 @@
+_id: req_011_get_profile__me_
+parentId: fld_003_02__users
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/users/me'
+name: Get Profile (Me)
+description: ''
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{patientToken}}
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{patientToken}}'
+  disabled: false
+metaSortKey: -1788779720413
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

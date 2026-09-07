@@ -1,0 +1,27 @@
+_id: req_043_platform_statistics__redis_cached_
+parentId: fld_009_08__admin___audit
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/admin/statistics'
+name: Platform Statistics (Redis Cached)
+description: ''
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{adminToken}}
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{adminToken}}'
+  disabled: false
+metaSortKey: -1788779720093
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

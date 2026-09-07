@@ -1,0 +1,21 @@
+_id: req_001_root_welcome
+parentId: fld_001_00__health___system
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/'
+name: Root Welcome
+description: ''
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1788779720513
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

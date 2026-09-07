@@ -1,0 +1,27 @@
+_id: req_041_get_my_payments
+parentId: fld_008_07__payments
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/payments/my?page=1&limit=10'
+name: Get My Payments
+description: ''
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{patientToken}}
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{patientToken}}'
+  disabled: false
+metaSortKey: -1788779720113
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

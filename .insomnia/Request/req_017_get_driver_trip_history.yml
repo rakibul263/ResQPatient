@@ -1,0 +1,27 @@
+_id: req_017_get_driver_trip_history
+parentId: fld_004_03__drivers
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/drivers/me/trips?page=1&limit=10'
+name: Get Driver Trip History
+description: ''
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{driverToken}}
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{driverToken}}'
+  disabled: false
+metaSortKey: -1788779720353
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request

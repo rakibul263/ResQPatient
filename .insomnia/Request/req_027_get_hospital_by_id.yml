@@ -1,0 +1,27 @@
+_id: req_027_get_hospital_by_id
+parentId: fld_006_05__hospitals
+modified: 1788779720523
+created: 1788779720523
+url: '{{baseUrl}}/api/v1/hospitals/{{hospitalId}}'
+name: Get Hospital by ID
+description: ''
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: Authorization
+    value: Bearer {{patientToken}}
+    disabled: false
+authentication:
+  type: bearer
+  token: '{{patientToken}}'
+  disabled: false
+metaSortKey: -1788779720253
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
+type: Request
